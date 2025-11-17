@@ -33,6 +33,7 @@ impacket-smbserver share . -smb2support
 > Start the malicious python server
 
 ```
+# Edit first the information about the IP, share, and filename for UNC coercing. 
 python3 ms-photos-server.py
 ```
 <br>
