@@ -48,7 +48,7 @@ Open chrome and navigate to <IP>/test
 <br>
 
 Also, it can be done with responder. Any unresolved domains issuing a LLMNR request will be redirected to the script, allowing to coerce any user instead of popping up a NTLM user/password auth window.
-To make it work, run the script with --responder
+To make it work, run the script first and then the responder. 
 
 <br>
 
