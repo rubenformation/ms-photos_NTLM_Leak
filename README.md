@@ -10,6 +10,8 @@ By [Ruben Enkaoua](https://x.com/rubenlabs)
 
 The Microsoft ms-photos URI scheme takes fileName as parameter, which can be submitted with a UNC path, leaking NTLMv2-SSP hashes one opened. By crafting a specially formatted link, an attacker can coerce a victim into launching the Microsoft Photos app directly from a browser. When triggered, this behavior results in the leakage of the victim’s NTLMv2-SSP hash to an attacker-controlled server. This issue enables credential exposure and potential relay attacks in enterprise environments, requiring only minimal user interaction (Opening the App). Microsoft didn't recognize the vulnerability and no CVE was issued. Also, I was inspired by the [Syss blog](https://blog.syss.com/posts/abusing-ms-office-protos/) from 2022.<br><br>
 
+Since the NTLMv2-SSP challenge can be leaked to public-facing UNC paths (except if an outbound SMB/445 firewall rule is set), the vulnerability can be combined to websites infections, leading to supply-chain attacks.<br><br>
+
 From [MSDN Documentation](https://learn.microsoft.com/en-us/windows/apps/develop/launch/launch-default-app#photos-app-uri-scheme) about the URI scheme we can find the following:
 
 <br>
