@@ -1,6 +1,6 @@
 # Microsoft ms-photos URI NTLM Leak
 
-### New unpatched 0 day vulnerability allowing to leak NTLM hashes from browsers with one click
+### New unpatched vulnerability allowing to leak NTLM hashes from browsers with one click
 By [Ruben Enkaoua](https://x.com/rubenlabs)
 <br>
 <br>
